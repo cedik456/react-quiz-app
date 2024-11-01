@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Rubik:wght@900&display=swap");
-
 /* Define custom root variables */
 :root {
   --font-family: "Poppins", sans-serif;
@@ -27,10 +25,10 @@ html:focus-within {
   scroll-behavior: smooth;
 }
 
-html,
+/* html,
 body {
   height: 100%;
-}
+} */
 
 body {
   min-height: 100vh;
@@ -38,6 +36,14 @@ body {
   line-height: var(--line-height);
   font-family: var(--font-family);
   cursor: default;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    90deg,
+    hsla(212, 35%, 58%, 1) 0%,
+    hsla(218, 32%, 80%, 1) 100%
+  );
 }
 
 a:not([class]) {
@@ -71,19 +77,12 @@ picture {
   }
 }
 
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+.container .correct {
+  background: #dffff2;
+  border-color: rgb(103, 154, 103);
 }
 
-.wrapper {
-  display: flex;
-  flex-direction: column;
-}
-
-.btn-container {
-  display: flex;
-  gap: 0.5rem;
+.container .wrong {
+  background: #ffebeb;
+  border-color: rgb(235, 77, 77);
 }
